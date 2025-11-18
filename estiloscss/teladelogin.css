@@ -1,0 +1,123 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+#senhaconteiner{
+  width: 324px;
+
+}
+
+
+h1{
+  
+  font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 64px;
+  color: #2ECC71;
+  
+
+}
+
+
+#emailContainer{
+
+  width: 324px;
+text-align: center;
+}
+
+.E-mail{
+  font-family: "Jersey 20",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: left;
+}
+
+input{
+  border-radius: 10px;    
+  width: 325px;
+    height: 35px;
+  font-size: 20px;
+font-family: "Jersey 20",sans-serif;
+    
+}
+
+
+.senha{
+  font-family: "Jersey 20",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  text-align: left;
+  border: 0px;
+  font-size: 20px;
+
+}
+
+button{
+  background-color: #2ECC71;
+  color:wblack;
+  border-radius: 30px;
+  width: 325px;
+  height: 36px;
+  margin-top: 32px;
+  margin-bottom: 32px;
+  font-size: 20px;
+box-shadow: 3px 3px 4px 0px rgba(0, 0, 17, 0.473);
+cursor:pointer;
+}
+div{
+  text-align: center;
+  
+}
+
+body{
+   font-family: "Jersey 20", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  text-align: center;
+  margin: 75px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+text{
+  color: black;
+
+}
+a{
+margin: 75px;
+cursor: pointer;
+font-size: 16px;
+color:  black;;
+
+}
+.tt{
+  color: white;
+}
+
+
+form {
+
+  height: 600px;
+  width: 360px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+}
+
+.links {
+  height: 160px;
+}
+::placeholder{
+    font-family: "Jersey 20",sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+}
