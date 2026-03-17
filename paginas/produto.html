@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head> 
+    <meta charset="UTF-8"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Produto - Nescau</title> 
+    <script src="https://kit.fontawesome.com/19d9bf0fc2.js" crossorigin="anonymous"></script> 
+    <link rel="stylesheet" href="..//estiloscss/produto.css"> 
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+    
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body> 
+    <div class="conteiner"> 
+        <div class="voltar"> 
+            <a href="#" id="conteiner1" class="retornar"> 
+                <i class="fa-solid fa-angle-left"></i> 
+            </a> 
+            <p>Voltar</p> 
+        </div> 
+
+        <div id="produto1"> 
+            <div class="produto"> 
+                <img src="https://phygital-files.mercafacil.com/catalogo/uploads/produto/achocolatado_em_p_nescau_nestl_370gr_57ab10d8-a051-4fd2-b11d-948d3a153470.jpg" alt="Nescau 370g"> 
+            </div> 
+
+            <div class="descrisao"> 
+                <p class="t1">Nescau 370g</p> 
+                <p class="t2">R$7,00</p> 
+                <p class="t3">Validade: 20/06/2026</p> 
+                <p class="t4">Quantidade disponível: 20 Unidades</p> 
+                <div class="star"> 
+                    <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star"></i> 
+                </div> 
+                <p class="t5">Local: Entao (Santa Maria)</p> 
+            </div> 
+
+            <form id="adicinarProdutoNaReserva"> 
+                <label>Quantidade para sua compra:</label> 
+                <input type="number" id="quantidade" value="1" min="1" required> 
+                <div class="btn-reserva"> 
+                    <button class="btn" type="submit">Reservar/Comprar</button> 
+                </div> 
+            </form>
+        </div> 
+    </div> 
+
+    <script> 
+        document.addEventListener('DOMContentLoaded', function() {
+            // Botão Voltar
+            document.getElementById('conteiner1').addEventListener('click', (e) => {
+                e.preventDefault();
+                window.history.back();
+            });
+
+            // Formulário
+            document.getElementById('adicinarProdutoNaReserva').addEventListener('submit', function (event) {
+                event.preventDefault(); 
+
+                const item = {
+                    nome: "Nescau 370g",
+                    preco: 7.00,
+                    quantidade: document.getElementById('quantidade').value
+                };
+
+                let reserva = JSON.parse(localStorage.getItem('reserva')) || [];
+                reserva.push(item);
+                localStorage.setItem('reserva', JSON.stringify(reserva));
+
+                Swal.fire({
+                    title: 'Adicionado!',
+                    text: 'O Nescau foi enviado para sua reserva.',
+                    icon: 'success',
+                    confirmButtonColor: '#d33', // Cor vermelha do Nescau
+                    confirmButtonText: 'Ver Reserva'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = "reserva.html";
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

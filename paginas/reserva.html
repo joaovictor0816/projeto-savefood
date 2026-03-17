@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/19d9bf0fc2.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="..//estiloscss/reserva.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jersey+20&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div id="lista-reserva">
+    </div>
+<p>Total: R$ <span id="valor-total">0,00</span></p>
+    <div class="conteiner">
+        <div class="voltar">
+            <a href="#" id="conteiner1" class="retornar">
+                <i class="fa-solid fa-angle-left"></i>
+            </a>
+            <p>
+
+                Reserva
+
+            </p>
+        </div>
+        <div class="conteiner1">
+            <p>Produtos</p>
+
+            <button>
+                <i class="fa-solid fa-trash-can"></i>Limpar 
+            </button>
+
+        </div>
+      
+
+    </div>
+    <script>
+        document.getElementById('conteiner1').addEventListener('click', (e) => {
+            e.preventDefault();
+            window.history.back();
+        });
+
+
+
+    </script>
+</body>
+
+</html>

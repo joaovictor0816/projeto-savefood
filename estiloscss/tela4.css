@@ -24,7 +24,7 @@ h1 {
 
 }
 
-p a {
+p a{
     color: darkblue; 
     text-decoration: underline;
     font-weight: bold;
@@ -43,7 +43,7 @@ input[type="text"] {
     width: 100%;
     padding: 12px;
     border: 1px solid #423f3f; 
-    border-radius: 0;
+    border-radius: 10px;
     background-color: white; 
     font-size: 1em;
     text-align: center;
